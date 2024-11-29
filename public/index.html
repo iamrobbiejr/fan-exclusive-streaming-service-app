@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport for Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Fan Exclusive - Exclusive Content Streaming Platform</title>
+    <meta name="description" content="Discover exclusive content from your favorite creators. Premium streaming experience with unique, behind-the-scenes access.">
+    <meta name="keywords" content="exclusive content, streaming, fan content, premium streaming, creator platform">
+
+    <!-- Security Meta Tags -->
+    <meta http-equiv="content-type" content="nosniff">
+    <meta http-equiv="x-ua-compatible" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- CSP (Content Security Policy) -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.fanexclusive.com;
+        font-src 'self' https://fonts.gstatic.com;
+        frame-ancestors 'none';
+        form-action 'self';
+    ">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.fanexclusive.com/">
+
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <!-- Robots Instruction -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Geo Tags (Optional) -->
+    <meta name="geo.region" content="ZW">
+    <meta name="geo.placename" content="Harare">
+
+    <!-- Web App Capable -->
+    <meta name="application-name" content="Fan Exclusive">
+    <meta name="theme-color" content="#FF6B6B">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
