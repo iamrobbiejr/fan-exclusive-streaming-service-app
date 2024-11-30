@@ -17,7 +17,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     { icon: Home, label: 'Home', path: '/' },
     { icon: Music2, label: 'All Music', path: '/music' },
     { icon: Video, label: 'Videos', path: '/videos' },
-    { icon: Radio, label: 'Livestream', path: '/livestream' },
+    { icon: Radio, label: 'Livestream', path: '/livestreams' },
     { icon: Ticket, label: 'Tickets', path: '/tickets' },
     { icon: Store, label: 'Store', path: '/store' },
     { icon: User, label: 'My Account', path: '/account' },
@@ -27,12 +27,8 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
       <>
         {/* Overlay */}
-        <div
-            className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity lg:hidden ${
-                isOpen ? 'opacity-100 z-40' : 'opacity-0 pointer-events-none'
-            }`}
-            onClick={() => setIsOpen(false)}
-        />
+        <div className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity lg:hidden ${isOpen ? 'opacity-100 z-40' : 'opacity-0 pointer-events-none'}`}
+            onClick={() => setIsOpen(false)}/>
 
         {/* Sidebar */}
         <div
@@ -58,7 +54,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
             <nav className="flex-1 overflow-y-auto">
               <ul className="p-2">
                 {menuItems.map((item, index) => (
-                    <li key={index}>
+                    <li key={item.label}>
                       <Link
                           to={item.path}
                           className="flex items-center space-x-2 p-2 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-blue-600"
