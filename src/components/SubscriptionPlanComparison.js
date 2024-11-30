@@ -1,39 +1,34 @@
 import React from 'react';
 
 const SubscriptionPlanComparison = () => {
-  const plans = [
-    {
-      name: 'Basic',
-      price: '$9.99/month',
-      features: ['Access to basic content', 'Limited live streams', 'Community forum access'],
-    },
-    {
-      name: 'Premium',
-      price: '$19.99/month',
-      features: ['Access to all content', 'Unlimited live streams', 'Priority community support', 'Exclusive merchandise discounts'],
-    },
-    {
-      name: 'VIP',
-      price: '$29.99/month',
-      features: ['All Premium features', 'Early access to new content', 'Monthly virtual meet-and-greet with creators', 'Ad-free experience'],
-    },
-  ];
-
   return (
-    <div className="mt-8">
-      <h3 className="text-2xl font-bold mb-4">Subscription Plan Comparison</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {plans.map((plan, index) => (
-          <div key={index} className="bg-white p-4 rounded shadow">
-            <h4 className="text-xl font-bold mb-2">{plan.name}</h4>
-            <p className="text-lg font-semibold mb-4">{plan.price}</p>
-            <ul className="list-disc list-inside">
-              {plan.features.map((feature, featureIndex) => (
-                <li key={featureIndex}>{feature}</li>
-              ))}
-            </ul>
+    <div className="mt-6 border-t border-gray-200 pt-6">
+      <h3 className="text-lg font-medium text-gray-900">Plan Comparison</h3>
+      <div className="mt-4 space-y-4">
+        <div className="flex items-start">
+          <div className="flex-shrink-0">
+            <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
           </div>
-        ))}
+          <p className="ml-3 text-sm text-gray-700">Basic: Limited access to content</p>
+        </div>
+        <div className="flex items-start">
+          <div className="flex-shrink-0">
+            <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <p className="ml-3 text-sm text-gray-700">Premium: Full access to content, ad-free experience</p>
+        </div>
+        <div className="flex items-start">
+          <div className="flex-shrink-0">
+            <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <p className="ml-3 text-sm text-gray-700">VIP: Everything in Premium + exclusive content and early access</p>
+        </div>
       </div>
     </div>
   );
