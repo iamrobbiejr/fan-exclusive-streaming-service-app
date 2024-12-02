@@ -15,42 +15,42 @@ function Shop() {
                 name: 'Faux Leather Wrapover Skirt',
                 price: 29.00,
                 category: 'APPAREL',
-                image: '/placeholder.svg?height=600&width=400'
+                image: 'https://via.placeholder.com/400'
             },
             {
                 id: 2,
                 name: 'Pink Joey Cotton-Jersey T-Shirt',
                 price: 60.00,
                 category: 'APPAREL',
-                image: '/placeholder.svg?height=600&width=400'
+                image: 'https://via.placeholder.com/400'
             },
             {
                 id: 3,
                 name: 'Mint Joey Cotton-Jersey T-Shirt',
                 price: 60.00,
                 category: 'APPAREL',
-                image: '/placeholder.svg?height=600&width=400'
+                image: 'https://via.placeholder.com/400'
             },
             {
                 id: 4,
                 name: 'Classic Cotton Hoodie',
                 price: 85.00,
                 category: 'APPAREL',
-                image: '/placeholder.svg?height=600&width=400'
+                image: 'https://via.placeholder.com/400'
             },
             {
                 id: 5,
                 name: 'Running Shoes',
                 price: 120.00,
                 category: 'ACCESSORIES',
-                image: '/placeholder.svg?height=600&width=400'
+                image: 'https://via.placeholder.com/400'
             },
             {
                 id: 6,
                 name: 'Classic Cap',
                 price: 25.00,
                 category: 'COLLECTIBLES',
-                image: '/placeholder.svg?height=600&width=400'
+                image: 'https://via.placeholder.com/400'
             }
         ];
 
