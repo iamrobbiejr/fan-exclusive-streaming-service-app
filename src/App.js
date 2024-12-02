@@ -23,13 +23,14 @@ import VideoPlayerPage from "./pages/VideoPlayerPage";
 import MusicPage from "./pages/MusicPage";
 import AlbumPage from "./pages/AlbumPage";
 import ArtistMusicPage from "./pages/ArtistMusicPage";
+import SignupComplete from "./pages/SignupComplete";
 
 function AppContent() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const { authUser } = useAuth();
 
     return (
-        <div className="flex min-h-screen bg-gray-100">
+        <div className="flex min-h-screen bg-amber-100">
             {authUser && <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />}
             <div className={`flex flex-col min-h-screen w-full ${authUser ? 'lg:ml-64' : ''}`}>
                 <Header setIsOpen={setIsSidebarOpen} />
@@ -37,6 +38,7 @@ function AppContent() {
                     <Routes>
                         <Route path="/login" element={<Login />} />
                         <Route path="/signup" element={<Signup />} />
+                        <Route path="/complete" element={<SignupComplete />} />
                         <Route
                             path="/dashboard"
                             element={

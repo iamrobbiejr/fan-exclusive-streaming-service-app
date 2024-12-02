@@ -6,7 +6,7 @@ const LivestreamCard = ({ livestream }) => {
   return (
     <Link to={`/livestream/${livestream.id}`} className="block">
       <div className="relative rounded-lg overflow-hidden shadow-lg">
-        <img src={livestream.image} alt={livestream.title} className="w-full h-48 object-cover" />
+        <img src={livestream.image} alt={livestream.title} className="w-full h-52 object-cover" />
         {livestream.status === 'live' && (
           <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold">
             LIVE

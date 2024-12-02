@@ -30,12 +30,12 @@ const LiveStreamPage = () => {
           <img
             src={livestream.image}
             alt={livestream.title}
-            className="w-full h-full object-cover"
+            className="w-full h-96 object-cover"
           />
         </div>
       )}
       
-      <div className="bg-gray-100 p-4 rounded-lg">
+      <div className="bg-gray-100 p-4 rounded-lg shadow-2xl">
         <h2 className="text-xl font-semibold mb-2">Livestream Details</h2>
         <p><strong>Status:</strong> {livestream.status}</p>
         <p><strong>Start Time:</strong> {new Date(livestream.startTime).toLocaleString()}</p>

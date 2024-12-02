@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SubscriptionPlanComparison from "./SubscriptionPlanComparison";
+
 
 const backgrounds = [
   '/images/bg/bg.jpeg',
@@ -20,6 +21,7 @@ const [gender, setGender] = useState('');
 const [dob, setDob] = useState('');
 const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +35,7 @@ const [phone, setPhone] = useState('');
       setTimeout(() => {
         setLoading(false);
         // Navigate to dashboard or show success message
+        navigate('/complete')
       }, 2000);
     }
   };
@@ -211,7 +214,7 @@ const [phone, setPhone] = useState('');
                   <img className="w-auto h-16 sm:h-16" src="/images/favicon.png" alt="Seal Logo"/>
                 </div>
                 <p className="mt-3 text-gray-800 dark:text-gray-300">
-                  Step {step} of 3: {step === 1 ? "Account Details" : step === 2 ? "Choose Plan" : "Confirmation"}
+                  Step {step} of 3: {step === 1 ? "Account Details" : step === 2 ? "Choose Plan" : "Confirmation" }
                 </p>
               </div>
 
@@ -240,7 +243,8 @@ const [phone, setPhone] = useState('');
                             type="submit"
                             className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-amber-600 rounded-lg hover:bg-amber-400 focus:outline-none focus:bg-amber-400 focus:ring focus:ring-amber-300 focus:ring-opacity-50"
                         >
-                          {step < 3 ? 'Next' : 'Sign Up'}
+
+                          {step < 3 ? 'Next' :  'Complete Sign Up'}
                         </button>
                     )}
                   </div>
@@ -272,14 +276,10 @@ const [phone, setPhone] = useState('');
             <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
               <div>
                 <h2 className="text-4xl font-bold text-white sm:text-4xl">
-                  {step === 1 ? "Join Our Fan-Exclusive Platform" :
-                      step === 2 ? "Choose Your Experience" :
-                          "Almost There!"}
+                  {step === 1 ? "Join Our Fan-Exclusive Platform" : step === 2 ? "Choose Your Experience" : "Almost There!"}
                 </h2>
                 <p className="max-w-xl mt-3 text-gray-300 text-lg">
-                  {step === 1 ? "Create your account to access exclusive content from your favorite artists." :
-                      step === 2 ? "Select a plan that suits your passion for music and entertainment." :
-                          "Review your details and get ready to dive into a world of exclusive content."}
+                  {step === 1 ? "Create your account to access exclusive content from your favorite artists." : step === 2 ? "Select a plan that suits your passion for music and entertainment." : "Review your details and get ready to dive into a world of exclusive content."}
                 </p>
               </div>
             </div>

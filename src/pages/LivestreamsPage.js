@@ -17,7 +17,7 @@ const LivestreamsPage = () => {
         <h2 className="text-2xl font-semibold mb-4">Ongoing Livestreams</h2>
         <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
           {ongoingStreams.map(stream => (
-            <div key={stream.id}>
+            <div className="m-1 p-4" key={stream.id}>
               <LivestreamCard livestream={stream} />
             </div>
           ))}

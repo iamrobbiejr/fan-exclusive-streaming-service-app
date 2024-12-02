@@ -51,7 +51,7 @@ export const livestreams = [
     id: 7,
     title: "Hip Hop Showcase",
     subtitle: "Rhymes and Beats",
-    image: "https://images.unsplash.com/photo-1547741538-4c3a0e6dfb79",
+    image: "https://media.istockphoto.com/id/2181251327/photo/rapper-performance-show-man-neon-artist-lamp-smoke.webp?a=1&b=1&s=612x612&w=0&k=20&c=jRuAFh_TFCLTtRz4okVE3gstAYB53KNKmdnseUxszd0=",
     status: "later",
     startTime: new Date(Date.now() + 1000 * 60 * 60 * 24 * 15).toISOString(), // 15 days from now
   },
