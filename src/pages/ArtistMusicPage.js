@@ -24,7 +24,7 @@ const ArtistMusicPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center mb-8">
-        <img src={artist.avatar} alt={artist.name} className="w-24 h-24 rounded-full mr-4" />
+        <img src={artist.avatar} alt={artist.name} className="w-60 h-60 rounded-full mr-4" />
         <div>
           <h1 className="text-3xl font-bold">{artist.name}</h1>
           <p className="text-gray-600">{artist.genre}</p>

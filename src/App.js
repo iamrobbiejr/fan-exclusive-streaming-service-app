@@ -24,6 +24,7 @@ import MusicPage from "./pages/MusicPage";
 import AlbumPage from "./pages/AlbumPage";
 import ArtistMusicPage from "./pages/ArtistMusicPage";
 import SignupComplete from "./pages/SignupComplete";
+import Albums from "./pages/Albums";
 
 function AppContent() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -123,6 +124,7 @@ function AppContent() {
                         <Route path="/artist/:id" element={<PrivateRoute><ArtistPage /></PrivateRoute>} />
                         <Route path="/video/:id" element={<PrivateRoute><VideoPlayerPage /></PrivateRoute>} />
                         <Route path="/music" element={<PrivateRoute><MusicPage /></PrivateRoute>} />
+                        <Route path="/albums" element={<PrivateRoute><Albums /></PrivateRoute>} />
                         <Route path="/album/:id" element={<PrivateRoute><AlbumPage /></PrivateRoute>} />
                         <Route path="/artist-music/:id" element={<PrivateRoute><ArtistMusicPage /></PrivateRoute>} />
                         <Route path="*" element={<NotFound />} />

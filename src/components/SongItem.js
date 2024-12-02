@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 
 const SongItem = ({ song, onPlay }) => {
   return (
-    <div className="flex items-center justify-between p-2 hover:bg-gray-100">
+    <div className="flex items-center justify-between p-4 border-b border-amber-300 hover:bg-amber-100">
       <div>
         <h3 className="font-semibold">{song.title}</h3>
         <p className="text-sm text-gray-600">{song.duration}</p>
