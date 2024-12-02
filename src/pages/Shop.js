@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 function Shop() {
     const [products, setProducts] = useState([]);
@@ -54,11 +55,16 @@ function Shop() {
             }
         ];
 
+
         const dummyCategories = [
             {id: 'ALL', name: "ALL", count: 51},
-            { id: 'APPAREL', name: 'APPAREL', count: 38 },
-            { id: 'ACCESSORIES', name: 'ACCESSORIES', count: 2 },
-            { id: 'COLLECTIBLES', name: 'COLLECTIBLES', count: 11 }
+            { id: 'APPAREL', name: 'APPAREL', count: 38,
+                description: 'Shop now',
+                image: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-03-featured-category.jpg' },
+            { id: 'ACCESSORIES', name: 'ACCESSORIES', count: 2,   description: 'Shop now',
+                image: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-03-category-01.jpg'  },
+            { id: 'COLLECTIBLES', name: 'COLLECTIBLES', count: 11, description: 'Shop now',
+                image: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-03-category-02.jpg'  }
         ];
 
         setProducts(dummyProducts);
@@ -83,6 +89,46 @@ function Shop() {
                 </div>
             </div>
             <div className="max-w-[1400px] mx-auto px-4 py-8">
+
+                {/* Categories Section */}
+                <div className="mb-12">
+                    <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-3xl text-gray-900 font-bold">Shop by Category</h2>
+                        <Link
+                            to="/categories"
+                            className="text-amber-600 hover:text-amber-800 flex items-center"
+                        >
+                            Browse all categories
+                            <ArrowRight className="ml-1 h-4 w-4" />
+                        </Link>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {categories.map((category, i) => (
+                            category.id === 'ALL' ? null : (
+                                    <Link
+                                        key={category.id}
+                                        to={`/category/${category.id}`}
+                                        className={`relative overflow-hidden rounded-lg group ${category.className || ''}`}
+                                    >
+                                        <div className="aspect-w-3 aspect-h-2 w-full">
+                                            <img
+                                                src={category.image}
+                                                alt={category.name}
+                                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                            <div className="absolute bottom-4 left-4 text-white">
+                                                <h3 className="text-lg font-semibold">{category.name}</h3>
+                                                <p className="text-sm mt-1">{category.description}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                )
+
+                        ))}
+                    </div>
+                </div>
 
                 {/* Category Tabs */}
                 <div className="flex gap-8 mb-12 border-b border-gray-200">
