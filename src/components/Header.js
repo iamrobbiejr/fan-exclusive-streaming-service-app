@@ -31,7 +31,7 @@ const Header = ({ setIsOpen }) => {
 
                   )}
               </div>
-              <div className="lg:flex items-center space-x-8 hidden ">
+              <div className="lg:flex items-center mx-24 hidden ">
                   {authUser &&  <CartIcon/> }
               </div>
           </div>
