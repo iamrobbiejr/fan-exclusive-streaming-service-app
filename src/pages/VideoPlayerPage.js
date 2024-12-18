@@ -18,13 +18,13 @@ const VideoPlayerPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">{video.title}</h1>
-      <div className="aspect-w-16 aspect-h-9 mb-8">
+      <div className="aspect-w-16 aspect-h-12 mb-8">
         <iframe title={video.title}
           src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                style={{ border: 'none' }}
+                style={{ border: 'none', boxShadow: '10px 20px 40px rgba(0, 0, 0, 0.2)' }}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="w-full h-full"
+          className="w-auto h-full"
         ></iframe>
       </div>
       <h2 className="text-2xl font-bold mb-4">More Videos</h2>
